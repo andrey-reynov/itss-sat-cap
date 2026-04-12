@@ -1,0 +1,13 @@
+.DS_Store
+.mpl-cache/
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+models/
+results/channel_dataset.csv
+results/channel_dataset_featured.csv
+results/capacity_control_results.csv
+datasets/ip_addresses_sample.tar

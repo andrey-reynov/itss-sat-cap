@@ -1,0 +1,11 @@
+{
+  "selected_series_ids": [
+    "11069",
+    "103",
+    "1368",
+    "10256",
+    "1367"
+  ],
+  "best_model": "NaiveLastValue",
+  "records_after_feature_engineering": 6693
+}

@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "pdf:docs": "python3 render_markdown_pdf.py docs/report.md docs/presentation.md docs/speech.md",
+    "pdf:diagrams": "python3 render_markdown_pdf.py docs/diagrams.md",
+    "pdf:diagrams:sections": "python3 render_diagrams_sections.py",
+    "pdf:root": "python3 render_markdown_pdf.py README.md CONTRIBUTING.md PUBLISHING.md",
+    "pdf:all": "python3 render_markdown_pdf.py README.md CONTRIBUTING.md PUBLISHING.md docs/report.md docs/presentation.md docs/speech.md"
+  },
+  "dependencies": {
+    "marked": "^18.0.0",
+    "mermaid": "^11.14.0"
+  }
+}

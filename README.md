@@ -91,6 +91,43 @@ notebooks/itss_variant_9_satellite_capacity.ipynb
 
 При повторном запуске проекта также могут быть сгенерированы промежуточные CSV, но они не входят в шаблон репозитория.
 
+## Как собрать PDF из Markdown
+
+В репозитории есть конвертер `Markdown -> PDF` с поддержкой `mermaid`.
+
+Установка:
+
+```bash
+npm install
+```
+
+Примеры:
+
+```bash
+python3 render_markdown_pdf.py docs --output-dir pdf
+python3 render_markdown_pdf.py README.md CONTRIBUTING.md PUBLISHING.md --output-dir pdf
+python3 render_markdown_pdf.py docs/diagrams.md --output-dir pdf
+```
+
+Или через npm-скрипты:
+
+```bash
+npm run pdf:docs
+npm run pdf:diagrams
+npm run pdf:diagrams:sections
+npm run pdf:root
+npm run pdf:all
+```
+
+Готовые PDF сохраняются в каталог `pdf/`.
+
+Для `docs/diagrams.md` есть два режима:
+
+- `npm run pdf:diagrams` — попытка собрать один общий PDF;
+- `npm run pdf:diagrams:sections` — собрать отдельные printable PDF по каждому разделу схем.
+
+Второй вариант обычно удобнее для печати и для вставки схем в презентацию.
+
 ## Ключевая идея проекта
 
 Прогноз трафика в этой работе используется не как самоцель, а как вход для управления ресурсом канала. Интеллектуальность системы проявляется в том, что прогноз нагрузки автоматически влияет на выделяемую пропускную способность и позволяет уменьшать перегрузки канала.
